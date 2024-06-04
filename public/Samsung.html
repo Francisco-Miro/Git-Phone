@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>-Samsung-</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="brands.css">    
+    <script type="module" src="app.js" defer></script>
+    <link rel="icon" href="https://i.ibb.co/yNNmw9S/Untitled-1.png">
+    <script src="https://kit.fontawesome.com/7515f3919f.js" crossorigin="anonymous"></script>
+    <script type="module" src="Phones.js" defer></script>
+</head>
+<body>
+    <nav class="nav" id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="navul">
+            <li class="navulli"><a href="home.html" class="navullia">Home</a></li>
+            <li class="navulli"><a href="Xiaomi.html" class="navullia">Xiaomi</a></li>
+            <li class="navulli"><a href="Apple.html" class="navullia">Apple</a></li>
+            <li class="navulli"><a href="Samsung.html" class="active navullia">Samsung</a></li>
+        </ul>
+    </nav>
+    <div class="separator"></div>
+    <div class="Main">
+        <h1 class="Head">Phones Of The Brand</h1>
+    </div>
+    <div class="BPHolder">
+        <button id="MenorPrecio" class="BP">Menor Precio</button>
+        <button id="MayorPrecio" class="BP">Mayor Precio</button>
+    </div>
+
+    <div id="S-container"></div>
+
+    <!-- Template for Samsung phone cards -->
+    <template id="S-template">
+        <div class="phone-card">
+            <img class="phone-image" src="" alt="Phone Image">
+            <div class="phone-details">
+                <h2 class="phone-model"></h2>
+                <p><strong>Precio:</strong> <span class="phone-price"></span></p>
+                <p><strong>Procesador:</strong> <span class="phone-processor"></span></p>
+                <p><strong>Almacenamiento:</strong> <span class="phone-storage"></span></p>
+                <p><strong>Pantalla:</strong> <span class="phone-screen"></span></p>
+                <p><strong>Cámara Principal:</strong> <span class="phone-camera"></span></p>
+                <p><strong>Batería:</strong> <span class="phone-battery"></span></p>
+                <div class="comment-container">
+                   <a href="comment.html"><button class="comment-button"><span>Comentar</span></button></a> 
+                    <button class="view-comments-button"><span>Ver Comentarios</span></button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    
+</body>
+</html>

@@ -1,0 +1,184 @@
+
+/*Header*/
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth
+}
+body{
+  font-family: 'Playfair Display', serif;
+  background-color: #457b9d;
+}
+.Presentacion2{
+  margin-bottom: 100px;
+}
+.mr{
+  margin-top: 20px;
+}
+.mof{
+  margin-right: 100px;
+}
+#TextoMini2, #TextoMini3{
+  margin-bottom: 20px;
+}
+.nav{
+  background-color: #f4f4ec;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  transition: all 0.5s ease;
+  z-index: 2  ;
+}
+.Il{
+  width: 150px;
+  height: 80px;
+  margin-top: 20px;
+  margin-left: 50px;
+  transition: 0.5s ease-in-out;
+}
+.navul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navulli{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+.navullia{
+  color: #1c555e;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+.active,.navullia:hover{
+  background:#e2ded3 ;
+  transition: .5s;
+}
+
+.checkbtn{
+  margin-top: 36px;
+  font-size: 30px;
+  color: #204158;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+.IC{
+left: auto;
+right: 20px;
+height: 20px;
+width: 80px;
+display: flex;
+position: absolute;
+top: 10px;
+}
+.IDIOMAS{
+border-radius: 200px;
+height: 22px;
+width: 22px;
+margin-left: 6px;
+}
+.IDIOMAS:hover{
+transform: scale(1.1);
+}
+.lol{
+  display: none;
+}
+@media (max-width:1050px){
+  .navullia{
+      font-size: 16px;
+      padding: 6px 12px;
+  }
+  .navulli{
+      margin-right: 0px;
+      margin-left: 0px;
+  }
+}
+
+/*Header*/
+.separator{
+  padding-top: 80px;
+}
+.HomeImage{
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat; 
+}
+.Gcontainer{
+  height: 1150px;
+  background-color: #f4f4ec;
+  width: 97%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  border: #756c6b 2px solid;
+}
+.BrandTitle{
+  font-size: 40px;
+  text-align: center;
+  padding-top: 40px;
+  color: black;
+}
+.ContentContainer{
+  margin-right: 60px;
+  margin-left: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+.Xiaomi{
+  border: #af9390 2px dotted;
+  box-shadow: 10px 10px #756c6b;
+  background-color: #e2ded3;
+} 
+.Apple{
+  border: #8d7c7a 2px dotted;
+  box-shadow: 10px 10px #595453;
+  background-color: #d4d0c3;
+}
+.Samsung{
+  border: #7c6e6d 2px dotted;
+  box-shadow: 10px 10px #4e4a49;
+  background-color: #c8c4b6;
+}
+.ContentText{
+ margin-right: 60px;
+ margin-left: 60px;
+ font-size: 20px;
+}
+
+.logout{
+  color: rgb(0, 0, 0);
+  background-color: #bda87c;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  box-shadow: 5px 5px #4e4a49;
+  float: right;
+  margin-right: 40px;
+  margin-bottom: 10px;
+  transition:  all 0.5s;
+}
+.logout:hover{
+  background-color: #b6a787;
+  color: rgb(182, 29, 29);
+  transform: translateY(-2px);
+}
+.divider{
+  height: 40px;
+  width: 100%;
+}
+
+

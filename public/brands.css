@@ -1,0 +1,163 @@
+.Main {
+    background-color: #e2ded3;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+body{
+    background-color: #457b9d;
+}
+img {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+
+#S-container, #X-container, #A-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    padding: 20px 0;
+}
+#S-container img, #X-container img, #A-container  img {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+.phone-card {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: #dadada 5px 5px;
+  }
+  
+  .phone-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; 
+  }
+
+/**/
+
+#S-container, #X-container, #A-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .phone-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+  }
+  
+  .phone-card img {
+    width: 100%;
+    height: auto;
+    transition: all 1s ease;
+}
+
+.phone-card:hover {
+    transform: scale(1.05);
+}
+
+  
+  .phone-details {
+    padding: 10px;
+    font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .phone-details h2 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .phone-details p {
+    margin: 5px 0;
+  }
+  .BPHolder{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  .BP{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding:  5px 5px;
+    font-size: 20px;
+    font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    background-color:bisque;
+    border: none;
+    box-shadow: 2px 2px rgb(152, 142, 128);
+  }
+  .BP:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+
+.BP:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+.comment-container{
+  display: flex;
+  justify-content: center;
+}
+.comment-button{
+  background-color: #af9390;
+  box-shadow:  #977672 2px 2px;
+  border: none;
+  margin-right: 10px;
+  padding: 5px;
+  font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.view-comments-button{
+  background-color: #af9390;
+  box-shadow:  #977672 2px 2px;
+  border: none;
+  margin-left: 10px;
+  padding: 5px;
+  font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.view-comments-button:hover, .comment-button:hover{
+  cursor: pointer;
+  background-color: #d1b4b0;
+  box-shadow:  #ac8a87 2px 2px;
+}
+.view-comments-button span, .comment-button span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.view-comments-button span:after, .comment-button span:after  {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.view-comments-button:hover span, .comment-button:hover span {
+  padding-right: 25px;
+}
+
+.view-comments-button:hover span:after, .comment-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
