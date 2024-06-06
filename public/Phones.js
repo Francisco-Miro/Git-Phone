@@ -16,6 +16,8 @@ class Phones {
     menorBoton.addEventListener("click", this._menorPrecio);
     const mayorBoton = document.querySelector("#MayorPrecio");
     mayorBoton.addEventListener("click", this._mayorPrecio);
+
+    this.currentBrand = document.querySelector("title").textContent;
   }
 
   _renderPhones() {
@@ -91,21 +93,29 @@ class Phones {
   }
 
   _menorPrecio() {
-    this.Galaxy.sort((a1, a2) => a1.precio - a2.precio);
-    this.Xiaomi.sort((a1, a2) => a1.precio - a2.precio);
-    this.iPhone.sort((a1, a2) => a1.precio - a2.precio);
-    this._renderPhones();
-    this._renderX();
-    this._renderIphone();
+    if (this.currentBrand.includes("Samsung")) {
+      this.Galaxy.sort((a1, a2) => a1.precio - a2.precio);
+      this._renderPhones();
+    } else if (this.currentBrand.includes("Xiaomi")) {
+      this.Xiaomi.sort((a1, a2) => a1.precio - a2.precio);
+      this._renderX();
+    } else if (this.currentBrand.includes("iPhone")) {
+      this.iPhone.sort((a1, a2) => a1.precio - a2.precio);
+      this._renderIphone();
+    }
   }
 
   _mayorPrecio() {
-    this.Galaxy.sort((a1, a2) => a2.precio - a1.precio);
-    this.Xiaomi.sort((a1, a2) => a2.precio - a1.precio);
-    this.iPhone.sort((a1, a2) => a2.precio - a1.precio);
-    this._renderPhones();
-    this._renderX();
-    this._renderIphone();
+    if (this.currentBrand.includes("Samsung")) {
+      this.Galaxy.sort((a1, a2) => a2.precio - a1.precio);
+      this._renderPhones();
+    } else if (this.currentBrand.includes("Xiaomi")) {
+      this.Xiaomi.sort((a1, a2) => a2.precio - a1.precio);
+      this._renderX();
+    } else if (this.currentBrand.includes("iPhone")) {
+      this.iPhone.sort((a1, a2) => a2.precio - a1.precio);
+      this._renderIphone();
+    }
   }
 
   loadPhones() {
@@ -124,17 +134,23 @@ class Phones {
 
   _onJsonReadySamsung(json) {
     this.Galaxy = json.Samsung;
-    this._renderPhones();
+    if (this.currentBrand.includes("Samsung")) {
+      this._renderPhones();
+    }
   }
 
   _onJsonReadyXiaomi(json) {
     this.Xiaomi = json.Xiaomi;
-    this._renderX();
+    if (this.currentBrand.includes("Xiaomi")) {
+      this._renderX();
+    }
   }
 
   _onJsonReadyIphone(json) {
     this.iPhone = json.iPhone;
-    this._renderIphone();
+    if (this.currentBrand.includes("iPhone")) {
+      this._renderIphone();
+    }
   }
 
   _onResponse(response) {
