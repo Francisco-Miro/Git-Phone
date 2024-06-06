@@ -116,7 +116,7 @@ transform: scale(1.1);
   background-repeat: no-repeat; 
 }
 .Gcontainer{
-  height: 1150px;
+  height: 1200px;
   background-color: #f4f4ec;
   width: 97%;
   margin-top: 20px;
@@ -180,5 +180,18 @@ transform: scale(1.1);
   height: 40px;
   width: 100%;
 }
-
-
+.Ccontainer{
+  margin: auto;
+  height: 450px;
+  width: 95%;
+  margin-top: 20px;
+  margin-top: 10px;
+  background-color: #f4f4ec;
+  border-radius: 5px;
+  border: #756c6b 2px solid;
+}
+.ComentText{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}

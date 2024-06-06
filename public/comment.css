@@ -1,0 +1,44 @@
+.CF{
+  margin-left: 40px;
+}
+.Choise{
+  font-size: 20px;
+}
+.model-input{
+  border: none;
+  background-color: #d1b4b0;
+  box-shadow:  #ac8a87 2px 2px;
+  font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+}
+.comment-input{
+  border:  #ac8a87 10px 10px;
+  background-color: #c9bfbf;
+  font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+}
+.Send{
+  border: none;
+  background-color: #af9390;
+  box-shadow:  #ac8a87 2px 2px;
+  font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  padding: 8px;
+  float: right;
+  margin-right: 80px;
+  transition: all 0.5s;
+}
+.Send:hover, .Send2:hover{
+  transform: translate(5px, 5px);
+  cursor: pointer;
+}
+.Send2{
+  border: none;
+  background-color: #af9390;
+  box-shadow:  #ac8a87 2px 2px;
+  font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  padding: 8px;
+  margin-right: 80px;
+  transition: all 0.5s;
+}

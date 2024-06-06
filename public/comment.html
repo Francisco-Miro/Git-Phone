@@ -3,7 +3,8 @@
     <meta charset="utf-8">
     <title>-Leave a Comment-</title>
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="brands.css">    
+    <link rel="stylesheet" href="brands.css">
+    <link rel="stylesheet" href="comment.css">   
     <script type="module" src="app.js" defer></script>
     <link rel="icon" href="https://i.ibb.co/yNNmw9S/Untitled-1.png">
     <script src="https://kit.fontawesome.com/7515f3919f.js" crossorigin="anonymous"></script>
@@ -27,5 +28,56 @@
     <div class="Main">
         <h1 class="Head">Comment Section</h1>
     </div>
+
+    
+    <div class="Ccontainer">
+        <h2 class="ComentText">In this section, you are free to leave your opinion regarding any of the phones currently displayed on this site. We ask that you please write responsibly and refrain from leaving anything unrelated to the contents of the site. Other than that, feel free to put your thoughts into words.</h2>
+        <div class="divider"></div>
+
+        <div class="CF"> 
+            <form id="comment-form">
+                <label for="model" class="Choise">Select a model:</label><br>
+                <select id="set-model" name="model" class="model-input">
+                    <option value="Galaxy S21">Galaxy S21</option>
+                    <option value="Galaxy Note 20 Ultra">Galaxy Note 20 Ultra</option>
+                    <option value="Galaxy A52">Galaxy A52</option>
+                    <option value="Galaxy A32">Galaxy A32</option>
+                    <option value="Galaxy M32">Galaxy M32</option>
+                    <option value="Galaxy F41">Galaxy F41</option>
+                    <option value="Galaxy A12">Galaxy A12</option>
+                    <option value="Galaxy M02">Galaxy M02</option>
+                    <option value="Galaxy A02s">Galaxy A02s</option>
+                    <option value="Galaxy M01">Galaxy M01</option>
+                    <option value="Redmi Note 10 Pro">Redmi Note 10 Pro</option>
+                    <option value="Mi 11">Mi 11</option>
+                    <option value="Redmi Note 11">Redmi Note 11</option>
+                    <option value="Mi 11 Lite">Mi 11 Lite</option>
+                    <option value="Redmi 10">Redmi 10</option>
+                    <option value="Poco X3 Pro">Poco X3 Pro</option>
+                    <option value="Redmi Note 9">Redmi Note 9</option>
+                    <option value="Mi 10T Pro">Mi 10T Pro</option>
+                    <option value="Redmi 9A">Redmi 9A</option>
+                    <option value="Poco X3 NFC">Poco X3 NFC</option>
+                    <option value="iPhone 13 Pro">iPhone 13 Pro</option>
+                    <option value="iPhone 13">iPhone 13</option>
+                    <option value="iPhone SE (2022)">iPhone SE (2022)</option>
+                    <option value="iPhone 12 Mini">iPhone 12 Mini</option>
+                    <option value="iPhone XR">iPhone XR</option>
+                    <option value="iPhone 11 Pro">iPhone 11 Pro</option>
+                    <option value="iPhone SE (2020)">iPhone SE (2020)</option>
+                    <option value="iPhone 11">iPhone 11</option>
+                    <option value="iPhone XS">iPhone XS</option>
+                    <option value="iPhone 8">iPhone 8</option>
+
+                </select><br><br>
+        
+                <label for="comment" class="Choise">Comment:</label><br>
+                <textarea id="set-comment" name="comment" rows="10" cols="170" class="comment-input"></textarea><br><br>
+        
+                <input type="submit" value="Send" class="Send" id="Send">
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

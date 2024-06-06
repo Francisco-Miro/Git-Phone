@@ -10,7 +10,7 @@ import fetch from 'node-fetch'; //ERNESTO: libreria requerida para poder hacer e
 
 const dirname = fs.realpathSync('.');
 
-class DictionaryBackendServer {
+class PhoneApiBackEndServer {
   constructor() {
     const app = express();
     app.use(express.json());
@@ -34,11 +34,48 @@ class DictionaryBackendServer {
     
     app.get('/brandLookup/:brand', authentication.checkAuthenticated, this.BrandLookup); //ERNESTO: este endpoint permite retorna los celulares de una marca
     
-    
+    app.post('/doComment/', authentication.checkAuthenticated, this.doComment);
+    app.get('/viewComment/', authentication.checkAuthenticated, this.viewComment);
+
+
     app.listen(3000, () => console.log('Listening on port 3000'));    
   }
 
-  
+  async viewComment(req, res) {
+    const model = req.body.model;
+    const query = { model: model };
+    const collection = db.collection("Comments");
+    const stored = await collection.findOne(query);
+    const response = {
+      model: model,
+      user: stored ? stored.user : '',
+      comment: stored ? stored.comment : ''
+    };
+    res.json(response);
+   }
+
+  async doComment(req, res) {
+    const user = req.user.user; 
+    const model = req.body.model;
+    const comment = req.body.comment;
+
+    console.log('Username:', user);
+    console.log('Modelo:', model); 
+    console.log('Comentario:', comment);
+
+    const collection = db.collection("Comments");
+    const query = { user: user, model: model };
+    const update = { $set: { comment: comment } };
+    const params = { upsert: true };
+
+    try {
+        await collection.updateOne(query, update, params);
+        res.json({ success: true });
+    } catch (error) {
+        console.error('Error updating comment:', error);
+        res.status(500).json({ success: false, error: 'Failed to update comment' });
+    }
+}
 
   async BrandLookup(req,res){
     const API_URL = 'https://www.mockachino.com/a35ab8ac-5d03-48/Phones'; 
@@ -147,4 +184,4 @@ class DictionaryBackendServer {
   */
 }
 
-new DictionaryBackendServer();
+new PhoneApiBackEndServer();
