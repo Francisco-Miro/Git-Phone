@@ -152,58 +152,57 @@ button:hover {
 @media (max-width: 1050px) {
     form {
         width: 90%;
+        height: 60%;
+    }
+    .Mtext{
+        font-size:80px;
     }
     header{
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
-    .con{
+    .field-set{
+        height: 30vh;
+    }
+    .input-item{
+        font-size: 32.25px;
+        margin-top: 20px;
+        height: 70px;
+    }
+    .con {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
-}
-
-@media (max-width: 768px) {
-    form {
-        width: 95%;
-    }
-
     input[class="form-input"] {
-        width: calc(100% - 45px);
+        width: 250px;
+        height: 70px;
+        font-size: 16px;
+        font-family: 'Abel', sans-serif;
+        color: #000000;
+        outline: none;
+        border: none;
+        border-radius: 0px 5px 5px 0px;
+        transition: 0.2s linear;
     }
-
-    button {
+    .submits {
         width: 100%;
+    }
+    button {
+        font-size: 30px;
+        height: 50px;
+        margin-right: 0px;
+        font-family: 'Abel', sans-serif;
+    }
+    .sign-up {
+        font-size: 30px;
+        height: 50px;
+        margin-right: 0px;
+        font-family: 'Abel', sans-serif;
     }
 }
 
-@media (max-width: 480px) {
-    form {
-        width: 100%;
-        padding: 5%;
-    }
 
-    header h2 {
-        font-size: 200%;
-    }
-
-    input[class="form-input"] {
-        width: calc(100% - 45px);
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    button {
-        width: 100%;
-        height: 45px;
-        font-size: 14px;
-    }
-
-    .input-item, #eye {
-        padding: 10px;
-    }
-}
 .overlay {
     display: flex;
     justify-content: center;
