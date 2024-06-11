@@ -6,10 +6,7 @@ class Login {
 
       const registerForm = document.querySelector('#data-form');
       this.doRegister = this.doRegister.bind(this);
-      registerForm.addEventListener('submit', this.doRegister);
-
-      this.setWordInput = resultsContainer.querySelector('#username');
-      this.setDefInput = resultsContainer.querySelector('#password');   
+      registerForm.addEventListener('submit', this.doRegister); 
     }
 
   doRegister(event) {

@@ -176,7 +176,7 @@ body {
 
 .Ccontainer {
   width: 95%;
-  height: 450px;
+  height: 500px;
   margin: 20px auto;
   background-color: #f4f4ec;
   border-radius: 5px;
@@ -191,9 +191,9 @@ body {
 
 /* Media queries */
 
-@media (min-width: 1050px) {
+@media (max-width: 1050px) {
 .Gcontainer {
-  height: 1400px;
+  height: 1500px;
   background-color: #f4f4ec;
   width: 97%;
   margin: 20px auto;
@@ -262,11 +262,6 @@ body {
     right: 0;
   }
 
-  .Gcontainer {
-    height: auto;
-    width: 100%;
-    margin-top: 10px;
-  }
 
   .ContentText {
     margin: 0 20px;
