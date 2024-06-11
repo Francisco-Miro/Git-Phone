@@ -5,7 +5,6 @@
     <title>-Samsung-</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="brands.css">    
-    <script type="module" src="app.js" defer></script>
     <link rel="icon" href="https://i.ibb.co/yNNmw9S/Untitled-1.png">
     <script src="https://kit.fontawesome.com/7515f3919f.js" crossorigin="anonymous"></script>
     <script type="module" src="Phones.js" defer></script>
@@ -21,8 +20,9 @@
         <ul class="navul">
             <li class="navulli"><a href="home.html" class="navullia">Home</a></li>
             <li class="navulli"><a href="Xiaomi.html" class="navullia">Xiaomi</a></li>
-            <li class="navulli"><a href="Apple.html" class="navullia">Apple</a></li>
+            <li class="navulli"><a href="Apple.html" class="navullia">iPhone</a></li>
             <li class="navulli"><a href="Samsung.html" class="active navullia">Samsung</a></li>
+            <li class="navulli"><a href="Profile.html" class="navullia">Profile</a></li>
         </ul>
     </nav>
 
@@ -32,8 +32,10 @@
         
     </div>
     <div class="BPHolder">
-        <button id="MenorPrecio" class="BP">Sort by Lowest Prices</button>
-        <button id="MayorPrecio" class="BP">Sort by Highest Prices</button>
+        <button id="MenorPrecio" class="comment-button"><span>Sort by Lowest Prices</span></button>
+        <button id="MayorPrecio" class="comment-button"><span>Sort by Highest Prices</span></button>
+        <a href="comment.html"><button class="comment-button"><span>Comment</span></button></a> 
+        <a href="viewcomment.html"><button class="view-comments-button"><span>View Comments</span></button></a>
     </div>
 
     <div id="S-container"></div>
@@ -50,10 +52,6 @@
                 <p><strong>Pantalla:</strong> <span class="phone-screen"></span></p>
                 <p><strong>Cámara Principal:</strong> <span class="phone-camera"></span></p>
                 <p><strong>Batería:</strong> <span class="phone-battery"></span></p>
-                <div class="comment-container">
-                   <a href="comment.html"><button class="comment-button"><span>Comentar</span></button></a> 
-                    <a href="viewcomment.html"><button class="view-comments-button"><span>Ver Comentarios</span></button></a>
-                </div>
             </div>
         </div>
     </template>

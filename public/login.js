@@ -63,20 +63,21 @@ async doLogin(event) {
             .then(user =>   window.location.href = '/');
     }
 
-    doLogOut(event){
-      event.preventDefault();
-      document.getElementById('logout').addEventListener('click', function() {
+    doLogOut(event) {
+        event.preventDefault();
+        console.log('Logout form submitted');
+    
         fetch('/logout/', { method: 'POST' })
-            .then(response => {
-                if (response.ok) {
-                    window.location.href = '/login';
-                } else {
-                    console.error('Log Out failed');
-                }
-            })
-            .catch(error => console.error('Error:', error));
-    });
-    }
+          .then(response => {
+            if (response.ok) {
+              console.log('Logout successful');
+              window.location.href = '/login';
+            } else {
+              console.error('Log out failed');
+            }
+          })
+          .catch(error => console.error('Error:', error));
+      }
 }
 // Init app
 new Login();

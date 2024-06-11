@@ -1,21 +1,27 @@
 class Logout {
   constructor() {
-    const logoutForm = document.querySelector('#logout');
-    logoutForm.addEventListener('submit', this.doLogOut);
+    this.logoutForm = document.querySelector('#logout');
+    if (this.logoutForm) {
+      this.logoutForm.addEventListener('submit', this.doLogOut.bind(this));
+    } else {
+      console.error('Logout form not found');
     }
-  doLogOut(event){
+  }
+
+  doLogOut(event) {
     event.preventDefault();
-    document.getElementById('logout').addEventListener('click', function() {
-      fetch('/logout/', { method: 'POST' })
-          .then(response => {
-              if (response.ok) {
-                  window.location.href = '/login';
-              } else {
-                  console.error('Log out failed');
-              }
-          })
-          .catch(error => console.error('Error:', error));
-  });
+    console.log('Logout form submitted');
+
+    fetch('/logout/', { method: 'POST' })
+      .then(response => {
+        if (response.ok) {
+          console.log('Logout successful');
+          window.location.href = '/login';
+        } else {
+          console.error('Log out failed');
+        }
+      })
+      .catch(error => console.error('Error:', error));
   }
 }
 

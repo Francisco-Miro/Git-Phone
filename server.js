@@ -6,7 +6,7 @@ import path from 'path';
 import fs from 'fs';
 import CryptoJS from 'crypto-js';
 import Bcrypt from 'bcrypt';
-import fetch from 'node-fetch'; //ERNESTO: libreria requerida para poder hacer el fetch
+import fetch from 'node-fetch';
 
 const dirname = fs.realpathSync('.');
 
@@ -32,27 +32,36 @@ class PhoneApiBackEndServer {
     app.get('/home/', authentication.checkAuthenticated, this.goHome); 
     app.get('/', authentication.checkAuthenticated, this.goHome);     
     
-    app.get('/brandLookup/:brand', authentication.checkAuthenticated, this.BrandLookup); //ERNESTO: este endpoint permite retorna los celulares de una marca
+    app.get('/brandLookup/:brand', authentication.checkAuthenticated, this.BrandLookup);
     
     app.post('/doComment/', authentication.checkAuthenticated, this.doComment);
-    app.get('/viewComment/', authentication.checkAuthenticated, this.viewComment);
+    app.get('/viewComment/:model',  authentication.checkAuthenticated, this.viewComment);
 
 
     app.listen(3000, () => console.log('Listening on port 3000'));    
   }
 
   async viewComment(req, res) {
-    const model = req.body.model;
-    const query = { model: model };
-    const collection = db.collection("Comments");
-    const stored = await collection.findOne(query);
-    const response = {
-      model: model,
-      user: stored ? stored.user : '',
-      comment: stored ? stored.comment : ''
-    };
-    res.json(response);
-   }
+    try {
+        const model = req.params.model;
+        const query = { model: model };
+        const collection = db.collection("Comments");
+        const stored = await collection.find(query).toArray(); // Obtén todos los comentarios
+
+        const response = stored.map(comment => ({
+            model: comment.model,
+            user: comment.user,
+            comment: comment.comment
+        }));
+
+        res.json(response);
+    } catch (error) {
+        console.error('Error retrieving comment:', error);
+        res.status(500).json({ success: false, error: 'Failed to retrieve comment' });
+    }
+}
+
+
 
   async doComment(req, res) {
     const user = req.user.user; 
