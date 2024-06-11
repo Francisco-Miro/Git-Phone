@@ -109,14 +109,12 @@ body {
   transform: scale(1.1);
 }
 
-/* Estilos para la imagen del Home */
 .HomeImage {
   width: 100%;
   height: auto;
   background-repeat: no-repeat;
 }
 
-/* Estilos para el contenedor principal */
 .Gcontainer {
   height: 1300px;
   background-color: #f4f4ec;
@@ -124,6 +122,9 @@ body {
   margin: 20px auto;
   border-radius: 5px;
   border: #756c6b 2px solid;
+}
+.separator{
+  height: 80px;
 }
 
 /* Títulos y textos */
@@ -189,6 +190,17 @@ body {
 }
 
 /* Media queries */
+
+@media (min-width: 1050px) {
+.Gcontainer {
+  height: 1400px;
+  background-color: #f4f4ec;
+  width: 97%;
+  margin: 20px auto;
+  border-radius: 5px;
+  border: #756c6b 2px solid;
+}
+}
 @media (max-width: 1050px) {
   .navullia {
     font-size: 16px;

@@ -31,8 +31,10 @@ class PhoneApiBackEndServer {
     app.get('/brandLookup/:brand', authentication.checkAuthenticated, this.BrandLookup);
     app.post('/doComment/', authentication.checkAuthenticated, this.doComment);
     app.get('/viewComment/:model', authentication.checkAuthenticated, this.viewComment);
-    app.get('/getUserProfile', authentication.checkAuthenticated, this.getProfile);
-    app.post('/updateProfileImage', authentication.checkAuthenticated, this.UpdateProfile);
+
+   app.post('/saveProfilePicture', authentication.checkAuthenticated, this.saveProfilePicture);
+   app.get('/getProfilePicture', authentication.checkAuthenticated, this.getProfilePicture);
+
     app.listen(3000, () => console.log('Listening on port 3000'));
   }
 
@@ -142,6 +144,38 @@ class PhoneApiBackEndServer {
   async goHome(req, res) {
     res.sendFile(path.join(dirname, "public/home.html"));
   }
-}
-
-new PhoneApiBackEndServer();
+  
+  async saveProfilePicture(req, res) {
+    try {
+        const user = req.user.user;
+        const { profilePicture } = req.body;
+        const collection = db.collection("Users");
+        await collection.updateOne({ user: user }, { $set: { profilePicture: profilePicture } }, { upsert: true });
+        res.json({ success: true });
+    } catch (error) {
+        console.error('Error saving profile picture:', error);
+        res.status(500).json({ success: false, error: 'Failed to save profile picture' });
+    }
+ }
+ 
+ 
+ async getProfilePicture(req, res) {
+  try {
+      const user = req.user.user;
+      const collection = db.collection("Users");
+      const profilePictureDoc = await collection.findOne({ user: user });
+      if (profilePictureDoc) {
+          res.json({ profilePicture: profilePictureDoc.profilePicture, userName: user }); // Incluir el nombre de usuario en la respuesta
+      } else {
+          res.status(404).json({ error: 'Profile picture not found' });
+      }
+  } catch (error) {
+      console.error('Error fetching profile picture:', error);
+      res.status(500).json({ error: 'Failed to fetch profile picture' });
+  }
+ }
+ }
+ 
+ 
+ new PhoneApiBackEndServer();
+ 

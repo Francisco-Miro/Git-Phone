@@ -12,7 +12,7 @@
   font-size: 15px;
 }
 .comment-input{
-  width: 1200px;
+  width: 1300px;
   border:  #ac8a87 10px 10px;
   background-color: #c9bfbf;
   font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
@@ -78,4 +78,7 @@
 }
 .separator2{
   height: 20px;
+}
+.separator{
+  height: 80px;
 }

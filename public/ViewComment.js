@@ -22,7 +22,7 @@ class ViewComment {
                         commentCard.classList.add('comment-card');
                         commentCard.innerHTML = `
                             <div class="comment-card-header">
-                                <span class="comment-user">User: ${comment.user}</span>
+                                <span class="comment-user">${comment.user}</span>
                             </div>
                             <div class="comment-card-body">
                                 <p class="comment-text">${comment.comment}</p>

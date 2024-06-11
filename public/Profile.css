@@ -1,0 +1,58 @@
+.Icontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.avatar-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 3px 3px black;
+}
+
+.user-info {
+    text-align: center;
+    margin-top: 10px; /* Espacio entre la imagen y la información del usuario */
+}
+
+.profile-input {
+    /* Estilos para el input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.profile-button {
+    /* Estilos para el botón */
+    background-color: #a8a59d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.user-info-text {
+    /* Estilos para el texto de usuario */
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-container {
+    text-align: center;
+}
+
+.profile-input,
+.profile-button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px; /* Espacio entre el input y el botón */
+}
+
+ 
