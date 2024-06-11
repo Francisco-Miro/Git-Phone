@@ -157,16 +157,15 @@ button:hover {
     .Mtext{
         font-size:80px;
     }
-    header{
-        margin-bottom: 0px;
+    .Mtext2{
+        font-size: 60px;
     }
-    .field-set{
-        height: 30vh;
+    header{
+        margin-bottom: 100px;
     }
     .input-item{
-        font-size: 32.25px;
-        margin-top: 20px;
-        height: 70px;
+        font-size: 60px;
+        height: 110px;
     }
     .con {
         display: flex;
@@ -174,10 +173,13 @@ button:hover {
         align-items: center;
         width: 100%;
     }
+    .log-in{
+        margin-left: 150px;
+    }
     input[class="form-input"] {
-        width: 250px;
-        height: 70px;
-        font-size: 16px;
+        width: 500px;
+        height: 110px;
+        font-size: 60px;
         font-family: 'Abel', sans-serif;
         color: #000000;
         outline: none;
@@ -189,14 +191,14 @@ button:hover {
         width: 100%;
     }
     button {
-        font-size: 30px;
-        height: 50px;
+        font-size: 80px;
+        height: 100px;
         margin-right: 0px;
         font-family: 'Abel', sans-serif;
     }
     .sign-up {
-        font-size: 30px;
-        height: 50px;
+        font-size: 80px;
+        height: 100px;
         margin-right: 0px;
         font-family: 'Abel', sans-serif;
     }
