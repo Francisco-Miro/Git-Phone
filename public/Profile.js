@@ -1,39 +1,36 @@
 class Profile {
     constructor() {  
-        const commentSearch = document.querySelector('#Send');
-        this.viewComment = this.viewComment.bind(this);
-        if (commentSearch)
-            commentSearch.addEventListener('click', this.viewComment);
+        const updateButton = document.querySelector('#update-button');
+        if (updateButton)
+            updateButton.addEventListener('click', this.updateProfileImage);
     }
-  
-    viewComment(event) {
+
+    updateProfileImage(event) {
         event.preventDefault();
+        alert('Image Updated')
+        const imageUrl = document.querySelector("#image-url").value;
   
-        const setmodel = document.querySelector("#search-model").value;
-  
-        return fetch('/viewComment/' + setmodel)
-            .then(response => response.json())
-            .then(json => {
-                const comments = document.querySelector("#comments");
-                comments.innerHTML = ''; // Limpia los comentarios anteriores
-                if (json.length > 0) {
-                    json.forEach(comment => {
-                        const commentElement = document.createElement('div');
-                        commentElement.classList.add('comment');
-                        commentElement.innerHTML = 
-                            `User:${comment.user}
-                            Comment:${comment.comment}`;
-                        comments.appendChild(commentElement);
-                    });
-                } else {
-                    comments.innerHTML = '<p>No comments found for this model.</p>';
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching comments:', error);
-            });
+        fetch('/updateProfileImage', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ imageUrl })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                document.querySelector("#profile-img").src = imageUrl;
+                document.querySelector("#image-url").value = '';
+                alert('Profile image updated successfully!');
+            } else {
+                alert('Failed to update profile image.');
+            }
+        })
+        .catch(error => {
+            console.error('Error updating profile image:', error);
+        });
     }
-  }
-  
-  new Profile();
-  
+}
+
+new Profile();
