@@ -1,29 +1,29 @@
 .CF{
   margin-left: 40px;
-}
-.Choise{
+ }
+ .Choise{
   font-size: 20px;
-}
-.model-input{
+ }
+ .model-input{
   border: none;
   background-color: #d1b4b0;
   box-shadow:  #ac8a87 2px 2px;
   font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
   font-size: 15px;
-}
-.comment-input{
+ }
+ .comment-input{
   width: 1500px;
   border:  #ac8a87 10px 10px;
   background-color: #c9bfbf;
   font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
   font-size: 15px;
-}
-@media (min-width: 940px) {
+ }
+ @media (min-width: 940px) {
   .comment-input{
     width: 800px;
   }
-}
-.Send{
+ }
+ .Send{
   border: none;
   background-color: #af9390;
   box-shadow:  #ac8a87 2px 2px;
@@ -33,12 +33,12 @@
   float: right;
   margin-right: 80px;
   transition: all 0.5s;
-}
-.Send:hover, .Send2:hover{
+ }
+ .Send:hover, .Send2:hover{
   transform: translate(5px, 5px);
   cursor: pointer;
-}
-.Send2{
+ }
+ .Send2{
   border: none;
   background-color: #af9390;
   box-shadow:  #ac8a87 2px 2px;
@@ -47,8 +47,8 @@
   padding: 8px;
   margin-right: 80px;
   transition: all 0.5s;
-}
-.comment-card {
+ }
+ .comment-card {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
@@ -56,29 +56,65 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   width: 80%;
-}
-
-.comment-card-header {
+ }
+ 
+ 
+ .comment-card-header {
   font-weight: bold;
   margin-bottom: 8px;
-}
-
-.comment-user {
+ }
+ 
+ 
+ .comment-user {
   color: #333;
-}
-
-.comment-card-body {
+ }
+ 
+ 
+ .comment-card-body {
   padding: 8px;
-}
-
-.comment-text {
+ }
+ 
+ 
+ .comment-text {
   margin: 0;
   font-size: 14px;
   color: #555;
-}
-.separator2{
+ }
+ .separator2{
   height: 20px;
-}
-.separator{
+ }
+ .separator{
   height: 80px;
-}
+ }
+ 
+ 
+ .comment-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+ }
+ 
+ 
+ .comment-user-info {
+  display: flex;
+  align-items: center;
+ }
+ 
+ 
+ .profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+ }
+ 
+ 
+ .comment-user {
+  font-weight: bold;
+ }
+ 
+ 
+ .comment-card-body {
+  margin-left: 50px; /* To align the comment text properly if needed */
+ }
+ 
