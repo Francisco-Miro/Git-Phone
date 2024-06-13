@@ -117,4 +117,28 @@
  .comment-card-body {
   margin-left: 50px; /* To align the comment text properly if needed */
  }
- 
+ @media (max-width: 1050px) {
+ .separator{
+  height: 120px;
+ }
+ .Choise{
+  font-size: 50px;
+ }
+ .Send{
+  font-size: 50px;
+ margin-top: 30px;
+ }
+ .model-input{
+  font-size: 30px;
+ }
+ .Send2{
+  font-size: 40px;
+ }
+ .comment-text{
+  font-size: 30px;
+ }
+ .profile-picture{
+  width: 80px;
+  height: 80px;
+ }
+}

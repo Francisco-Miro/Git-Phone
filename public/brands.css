@@ -161,3 +161,41 @@ img {
   opacity: 1;
   right: 0;
 }
+@media (max-width: 1050px) {
+.Main {
+  background-color: #e2ded3;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+.comment-button, .view-comments-button{
+  background-color: #af9390;
+  box-shadow:  #977672 2px 2px;
+  border: none;
+  margin-right: 10px;
+  padding: 8px;
+  font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+  font-size: 26px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.phone-card {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 400px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: #dadada 5px 5px;
+}
+#S-container img, #X-container img, #A-container img{
+  height: 400px;
+  width: 400px;
+}
+.phone-details{
+  font-size: 30px;
+}
+}

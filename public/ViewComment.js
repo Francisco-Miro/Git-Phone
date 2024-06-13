@@ -20,7 +20,7 @@ class ViewComment {
               commentCard.innerHTML = `
                 <div class="comment-card-header">
                   <div class="comment-user-info">
-                    <img src="${comment.profilePicture || 'default-profile.png'}" alt="${comment.user}'s profile picture" class="profile-picture">
+                    <img src="${comment.profilePicture || 'https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg'}" alt="${comment.user}'s profile picture" class="profile-picture">
                     <span class="comment-user">${comment.user}</span>
                   </div>
                 </div>
